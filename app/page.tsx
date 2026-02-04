@@ -1,65 +1,49 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
+import Features from "@/components/Features";
+import VODGallery from "@/components/VODGallery";
+import Pricing from "@/components/Pricing";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import ContactSupport from "@/components/ContactSupport";
+import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Meilleur Abonnement IPTV au Maroc 2026 | IPTV 4K Premium",
+  description: "Découvrez le meilleur abonnement IPTV au Maroc pour 2026. Profitez de +30 000 chaînes, films et séries en 4K/FHD. Service stable sans coupure, support WhatsApp 24/7.",
+  keywords: "abonnement IPTV Maroc, IPTV Maroc 2026, IPTV 4K Maroc, IPTV premium Maroc, meilleur IPTV Maroc",
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <Stats />
+      <VODGallery />
+      <div className="bg-gradient-to-b from-dark to-dark-accent">
+        <Features />
+      </div>
+      <Pricing />
+      <Testimonials />
+      <FAQ />
+      <ContactSupport />
+      <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/212708894866"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl transition-all transform hover:scale-110 z-[100] flex items-center justify-center"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.129l-.651 2.353 2.411-.644c.867.469 1.823.715 2.981.715 3.182 0 5.768-2.586 5.768-5.766 0-3.18-2.586-5.766-5.766-5.766zm3.446 8.212c-.149.427-.852.781-1.157.822-.271.037-.624.06-1.025-.06-.245-.073-.574-.191-1.503-.584-1.193-.505-1.958-1.713-2.018-1.793-.059-.08-.492-.654-.492-1.249 0-.595.311-.885.422-.995.111-.11.242-.138.322-.138.08 0 .16.001.23.003.076.002.179-.03.28-.27.112-.27.382-.93.415-1.001.033-.071.055-.152.008-.246-.047-.094-.105-.152-.21-.271-.105-.119-.219-.241-.312-.321-.101-.087-.206-.178-.088-.382.118-.204.523-.861 1.123-1.395.48-.427.886-.56 1.191-.56.305 0 .524.024.717.204.193.18.256.242.383.336a.35.35 0 00.312.003c.119-.059.752-.353.856-.445.105-.094.21-.137.314-.047.105.09.684.321.789.375.105.055.175.081.241.199.066.118.066.684-.083 1.111z" />
+          <path d="M12.036 3c-4.963 0-9 4.037-9 9 0 1.563.404 3.067 1.125 4.34L3 21l4.827-1.268A8.852 8.852 0 0012.036 21c4.963 0 9-4.037 9-9 0-4.963-4.037-9-9-9zm0 16.2c-1.398 0-2.722-.367-3.879-1.01l-.279-.156-2.883.756.77-2.784-.171-.272A7.147 7.147 0 014.836 12c0-3.97 3.23-7.2 7.2-7.2 3.97 0 7.2 3.23 7.2 7.2 0 3.97-3.23 7.2-7.2 7.2z" />
+        </svg>
+      </a>
+    </main>
   );
 }
